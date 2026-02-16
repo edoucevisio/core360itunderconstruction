@@ -6,37 +6,80 @@ export default function Home() {
     <>
       <Navbar />
 
-      {/* Add spacing because navbar is fixed */}
+      {/* Offset for fixed navbar */}
       <div style={{ marginTop: "90px" }}>
 
-        {/* HERO SECTION */}
-        <section className="bg-dark text-light py-5 text-center">
-          <div className="container py-5">
-            <h1 className="display-4 fw-bold">
-              Managed IT & Cybersecurity Solutions
-            </h1>
-            <p className="lead mt-3">
-              Protect. Optimize. Scale your business with Core360IT.
-            </p>
-            <a href="#contact" className="btn btn-primary btn-lg mt-4 px-4">
-              Schedule Consultation
-            </a>
-          </div>
-        </section>
+        {/* ===================== */}
+        {/* HERO CAROUSEL */}
+        {/* ===================== */}
+        <div
+          id="heroCarousel"
+          className="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div className="carousel-inner">
 
-        {/* ABOUT SECTION */}
-        <section className="py-5 bg-light">
-          <div className="container text-center">
-            <h2 className="mb-4 fw-bold">About Core360IT</h2>
-            <p className="lead">
-              Core360IT delivers complete managed IT and cybersecurity
-              solutions designed to protect, optimize, and scale your business.
-              We act as your dedicated technology partner.
-            </p>
-          </div>
-        </section>
+            <div className="carousel-item active">
+              <img
+                src="/images/slide1.webp"
+                className="d-block w-100"
+                alt="Managed IT"
+                style={{ height: "75vh", objectFit: "cover" }}
+              />
+            </div>
 
-        {/* SERVICES SECTION */}
+            <div className="carousel-item">
+              <img
+                src="/images/slide2.webp"
+                className="d-block w-100"
+                alt="Cybersecurity"
+                style={{ height: "75vh", objectFit: "cover" }}
+              />
+            </div>
+
+            <div className="carousel-item">
+              <img
+                src="/images/slide3.webp"
+                className="d-block w-100"
+                alt="Cloud & Microsoft"
+                style={{ height: "75vh", objectFit: "cover" }}
+              />
+            </div>
+
+            <div className="carousel-item">
+              <img
+                src="/images/slide4.webp"
+                className="d-block w-100"
+                alt="Web Development"
+                style={{ height: "75vh", objectFit: "cover" }}
+              />
+            </div>
+
+          </div>
+
+          {/* Controls */}
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="prev"
+          >
+            <span className="carousel-control-prev-icon"></span>
+          </button>
+
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#heroCarousel"
+            data-bs-slide="next"
+          >
+            <span className="carousel-control-next-icon"></span>
+          </button>
+        </div>
+
+        {/* ===================== */}
+        {/* SERVICES */}
+        {/* ===================== */}
         <section id="services" className="py-5">
           <div className="container">
             <h2 className="text-center mb-5 fw-bold">Our Services</h2>
@@ -87,7 +130,9 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ===================== */}
         {/* CALL TO ACTION */}
+        {/* ===================== */}
         <section className="bg-primary text-light py-5 text-center">
           <div className="container">
             <h2 className="fw-bold">Ready to Secure Your Business?</h2>
@@ -100,7 +145,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CONTACT SECTION */}
+        {/* ===================== */}
+        {/* CONTACT */}
+        {/* ===================== */}
         <section id="contact" className="py-5">
           <div className="container">
             <h2 className="text-center mb-4 fw-bold">Contact Us</h2>
