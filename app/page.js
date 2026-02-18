@@ -293,7 +293,7 @@ export default function Home() {
         }}
       >
         <img
-          src="/images/whatsapp.gif"
+          src="/images/callwhatsapp_transparent_fixed.gif"
           alt="WhatsApp"
           style={{ width: "60px", height: "60px", cursor: "pointer" }}
         />
