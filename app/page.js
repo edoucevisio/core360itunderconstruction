@@ -8,8 +8,6 @@ export default function Home() {
     <>
       <Navbar />
 
-      <div style={{ marginTop: "90px" }}>
-
         {/* ================= HERO CAROUSEL ================= */}
         <div
           id="heroCarousel"
