@@ -26,7 +26,6 @@ export default function Home() {
                 alt="Managed IT"
                 style={{ height: "85vh", objectFit: "cover" }}
               />
-
               <div
                 className="position-absolute top-0 start-0 w-100 h-100"
                 style={{
@@ -34,7 +33,6 @@ export default function Home() {
                     "linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2))",
                 }}
               ></div>
-
               <div className="carousel-caption text-start">
                 <h1 className="display-4 fw-bold">
                   Managed IT Services
@@ -63,7 +61,6 @@ export default function Home() {
                     "linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2))",
                 }}
               ></div>
-
               <div className="carousel-caption text-start">
                 <h1 className="display-4 fw-bold">
                   Advanced Cybersecurity
@@ -92,7 +89,6 @@ export default function Home() {
                     "linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2))",
                 }}
               ></div>
-
               <div className="carousel-caption text-start">
                 <h1 className="display-4 fw-bold">
                   Cloud & Microsoft 365
@@ -121,7 +117,6 @@ export default function Home() {
                     "linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2))",
                 }}
               ></div>
-
               <div className="carousel-caption text-start">
                 <h1 className="display-4 fw-bold">
                   Modern Web Development
@@ -162,37 +157,31 @@ export default function Home() {
             <h2 className="text-center mb-5 fw-bold">
               Our Services
             </h2>
-
             <div className="row g-4">
-
               <div className="col-md-3">
                 <div className="card h-100 shadow-sm border-0 p-4 text-center">
                   <h5 className="fw-bold mb-3">Managed IT</h5>
                   <p>24/7 monitoring and proactive support.</p>
                 </div>
               </div>
-
               <div className="col-md-3">
                 <div className="card h-100 shadow-sm border-0 p-4 text-center">
                   <h5 className="fw-bold mb-3">Cybersecurity</h5>
                   <p>Advanced protection and threat detection.</p>
                 </div>
               </div>
-
               <div className="col-md-3">
                 <div className="card h-100 shadow-sm border-0 p-4 text-center">
                   <h5 className="fw-bold mb-3">Cloud & Microsoft 365</h5>
                   <p>Secure cloud migration and collaboration tools.</p>
                 </div>
               </div>
-
               <div className="col-md-3">
                 <div className="card h-100 shadow-sm border-0 p-4 text-center">
                   <h5 className="fw-bold mb-3">Web Development</h5>
                   <p>Modern, scalable and high-performance websites.</p>
                 </div>
               </div>
-
             </div>
           </div>
         </section>
@@ -212,7 +201,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ================= CONTACT (WhatsApp Form) ================= */}
+        {/* ================= CONTACT ================= */}
         <section id="contact" className="py-5">
           <div className="container">
             <h2 className="text-center mb-4 fw-bold">
@@ -220,38 +209,13 @@ export default function Home() {
             </h2>
             <div className="row justify-content-center">
               <div className="col-md-6">
-
-                <form
-                  onSubmit={(e) => {
-                    e.preventDefault();
-
-                    const name = e.target.name.value;
-                    const email = e.target.email.value;
-                    const message = e.target.message.value;
-
-                    const whatsappMessage =
-                      `New Contact Form Message:%0A%0A` +
-                      `Name: ${name}%0A` +
-                      `Email: ${email}%0A` +
-                      `Message: ${message}`;
-
-                    const phoneNumber = "971501234567"; // 🔥 Replace with your number (no +)
-
-                    window.open(
-                      `https://wa.me/${phoneNumber}?text=${whatsappMessage}`,
-                      "_blank"
-                    );
-
-                    e.target.reset();
-                  }}
-                >
+                <form>
                   <input
                     name="name"
                     className="form-control mb-3"
                     placeholder="Name"
                     required
                   />
-
                   <input
                     name="email"
                     type="email"
@@ -259,7 +223,6 @@ export default function Home() {
                     placeholder="Email"
                     required
                   />
-
                   <textarea
                     name="message"
                     className="form-control mb-3"
@@ -267,12 +230,10 @@ export default function Home() {
                     placeholder="Message"
                     required
                   ></textarea>
-
-                  <button className="btn btn-success w-100">
-                    Send via WhatsApp
+                  <button className="btn btn-primary w-100">
+                    Send Message
                   </button>
                 </form>
-
               </div>
             </div>
           </div>
@@ -282,7 +243,7 @@ export default function Home() {
 
       {/* ================= FLOATING WHATSAPP BUTTON ================= */}
       <a
-        href="https://wa.me/23052519002" // 🔥 Replace with your number
+        href="https://wa.me/971501234567"
         target="_blank"
         rel="noopener noreferrer"
         style={{
