@@ -1,3 +1,5 @@
+"use client";
+
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -16,7 +18,7 @@ export default function Home() {
         >
           <div className="carousel-inner">
 
-            {/* Slide 1 – Managed IT */}
+            {/* Slide 1 */}
             <div className="carousel-item active position-relative">
               <img
                 src="/images/slide1.webp"
@@ -46,7 +48,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Slide 2 – Cybersecurity */}
+            {/* Slide 2 */}
             <div className="carousel-item position-relative">
               <img
                 src="/images/slide2.webp"
@@ -75,12 +77,12 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Slide 3 – Cloud */}
+            {/* Slide 3 */}
             <div className="carousel-item position-relative">
               <img
                 src="/images/slide3.webp"
                 className="d-block w-100"
-                alt="Cloud & Microsoft"
+                alt="Cloud"
                 style={{ height: "85vh", objectFit: "cover" }}
               />
               <div
@@ -104,7 +106,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Slide 4 – Web Development */}
+            {/* Slide 4 */}
             <div className="carousel-item position-relative">
               <img
                 src="/images/slide4.webp"
@@ -135,7 +137,6 @@ export default function Home() {
 
           </div>
 
-          {/* Controls */}
           <button
             className="carousel-control-prev"
             type="button"
@@ -211,7 +212,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ================= CONTACT ================= */}
+        {/* ================= CONTACT (WhatsApp Form) ================= */}
         <section id="contact" className="py-5">
           <div className="container">
             <h2 className="text-center mb-4 fw-bold">
@@ -219,28 +220,59 @@ export default function Home() {
             </h2>
             <div className="row justify-content-center">
               <div className="col-md-6">
-                <form>
+
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+
+                    const name = e.target.name.value;
+                    const email = e.target.email.value;
+                    const message = e.target.message.value;
+
+                    const whatsappMessage =
+                      `New Contact Form Message:%0A%0A` +
+                      `Name: ${name}%0A` +
+                      `Email: ${email}%0A` +
+                      `Message: ${message}`;
+
+                    const phoneNumber = "971501234567"; // 🔥 Replace with your number (no +)
+
+                    window.open(
+                      `https://wa.me/${phoneNumber}?text=${whatsappMessage}`,
+                      "_blank"
+                    );
+
+                    e.target.reset();
+                  }}
+                >
                   <input
+                    name="name"
                     className="form-control mb-3"
                     placeholder="Name"
                     required
                   />
+
                   <input
+                    name="email"
                     type="email"
                     className="form-control mb-3"
                     placeholder="Email"
                     required
                   />
+
                   <textarea
+                    name="message"
                     className="form-control mb-3"
                     rows="4"
                     placeholder="Message"
                     required
                   ></textarea>
-                  <button className="btn btn-primary w-100">
-                    Send Message
+
+                  <button className="btn btn-success w-100">
+                    Send via WhatsApp
                   </button>
                 </form>
+
               </div>
             </div>
           </div>
@@ -248,9 +280,9 @@ export default function Home() {
 
       </div>
 
-      {/* ================= WHATSAPP FLOAT ================= */}
+      {/* ================= FLOATING WHATSAPP BUTTON ================= */}
       <a
-        href="https://wa.me/1234567890"
+        href="https://wa.me/23052519002" // 🔥 Replace with your number
         target="_blank"
         rel="noopener noreferrer"
         style={{
@@ -261,7 +293,7 @@ export default function Home() {
         }}
       >
         <img
-          src="/images/whatsapp.webp"
+          src="/images/whatsapp.gif"
           alt="WhatsApp"
           style={{ width: "60px", height: "60px", cursor: "pointer" }}
         />
