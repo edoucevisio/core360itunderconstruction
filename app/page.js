@@ -261,7 +261,7 @@ export default function Home() {
         }}
       >
         <img
-          src="/images/callwhatsapp.gif"
+          src="/images/callwhatsapp.webp"
           alt="WhatsApp"
           style={{ width: "60px", height: "60px", cursor: "pointer" }}
         />
