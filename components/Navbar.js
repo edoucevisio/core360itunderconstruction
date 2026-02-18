@@ -9,6 +9,7 @@ export default function Navbar() {
         background: "rgba(0, 0, 0, 0.6)",
         backdropFilter: "blur(10px)",
         WebkitBackdropFilter: "blur(10px)",
+        height: "80px",
       }}
     >
       <div className="container">
