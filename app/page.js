@@ -16,6 +16,7 @@ export default function Home() {
         >
           <div className="carousel-inner">
 
+            {/* Slide 1 – Managed IT */}
             <div className="carousel-item active position-relative">
               <img
                 src="/images/slide1.webp"
@@ -34,20 +35,18 @@ export default function Home() {
 
               <div className="carousel-caption text-start">
                 <h1 className="display-4 fw-bold">
-                  Modern IT Solutions
+                  Managed IT Services
                 </h1>
                 <p className="lead">
-                  Scalable. Secure. Future-ready infrastructure.
+                  Proactive monitoring and full infrastructure management.
                 </p>
-                <a
-                  href="#contact"
-                  className="btn btn-primary btn-lg mt-3 px-4"
-                >
+                <a href="#contact" className="btn btn-primary btn-lg mt-3 px-4">
                   Get Started
                 </a>
               </div>
             </div>
 
+            {/* Slide 2 – Cybersecurity */}
             <div className="carousel-item position-relative">
               <img
                 src="/images/slide2.webp"
@@ -62,13 +61,26 @@ export default function Home() {
                     "linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2))",
                 }}
               ></div>
+
+              <div className="carousel-caption text-start">
+                <h1 className="display-4 fw-bold">
+                  Advanced Cybersecurity
+                </h1>
+                <p className="lead">
+                  Protect your business from modern cyber threats.
+                </p>
+                <a href="#services" className="btn btn-primary btn-lg mt-3 px-4">
+                  Explore Protection
+                </a>
+              </div>
             </div>
 
+            {/* Slide 3 – Cloud */}
             <div className="carousel-item position-relative">
               <img
                 src="/images/slide3.webp"
                 className="d-block w-100"
-                alt="Cloud"
+                alt="Cloud & Microsoft"
                 style={{ height: "85vh", objectFit: "cover" }}
               />
               <div
@@ -78,8 +90,21 @@ export default function Home() {
                     "linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2))",
                 }}
               ></div>
+
+              <div className="carousel-caption text-start">
+                <h1 className="display-4 fw-bold">
+                  Cloud & Microsoft 365
+                </h1>
+                <p className="lead">
+                  Secure cloud migration and productivity solutions.
+                </p>
+                <a href="#contact" className="btn btn-primary btn-lg mt-3 px-4">
+                  Move to Cloud
+                </a>
+              </div>
             </div>
 
+            {/* Slide 4 – Web Development */}
             <div className="carousel-item position-relative">
               <img
                 src="/images/slide4.webp"
@@ -94,10 +119,23 @@ export default function Home() {
                     "linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2))",
                 }}
               ></div>
+
+              <div className="carousel-caption text-start">
+                <h1 className="display-4 fw-bold">
+                  Modern Web Development
+                </h1>
+                <p className="lead">
+                  High-performance websites built for growth.
+                </p>
+                <a href="#contact" className="btn btn-primary btn-lg mt-3 px-4">
+                  Start Your Project
+                </a>
+              </div>
             </div>
 
           </div>
 
+          {/* Controls */}
           <button
             className="carousel-control-prev"
             type="button"
@@ -129,40 +167,28 @@ export default function Home() {
               <div className="col-md-3">
                 <div className="card h-100 shadow-sm border-0 p-4 text-center">
                   <h5 className="fw-bold mb-3">Managed IT</h5>
-                  <p>
-                    24/7 monitoring, infrastructure management,
-                    and proactive maintenance.
-                  </p>
+                  <p>24/7 monitoring and proactive support.</p>
                 </div>
               </div>
 
               <div className="col-md-3">
                 <div className="card h-100 shadow-sm border-0 p-4 text-center">
                   <h5 className="fw-bold mb-3">Cybersecurity</h5>
-                  <p>
-                    Endpoint protection, firewall management,
-                    and advanced threat detection.
-                  </p>
+                  <p>Advanced protection and threat detection.</p>
                 </div>
               </div>
 
               <div className="col-md-3">
                 <div className="card h-100 shadow-sm border-0 p-4 text-center">
                   <h5 className="fw-bold mb-3">Cloud & Microsoft 365</h5>
-                  <p>
-                    Secure cloud migration, Microsoft 365 management,
-                    and remote workforce enablement.
-                  </p>
+                  <p>Secure cloud migration and collaboration tools.</p>
                 </div>
               </div>
 
               <div className="col-md-3">
                 <div className="card h-100 shadow-sm border-0 p-4 text-center">
                   <h5 className="fw-bold mb-3">Web Development</h5>
-                  <p>
-                    Modern, secure, and scalable websites
-                    built for performance and growth.
-                  </p>
+                  <p>Modern, scalable and high-performance websites.</p>
                 </div>
               </div>
 
@@ -179,10 +205,7 @@ export default function Home() {
             <p className="lead mt-3">
               Let’s build your technology foundation for growth.
             </p>
-            <a
-              href="#contact"
-              className="btn btn-primary btn-lg mt-3 px-4"
-            >
+            <a href="#contact" className="btn btn-primary btn-lg mt-3 px-4">
               Schedule Consultation
             </a>
           </div>
@@ -227,7 +250,7 @@ export default function Home() {
 
       {/* ================= WHATSAPP FLOAT ================= */}
       <a
-        href="https://wa.me/23052519002"
+        href="https://wa.me/1234567890"
         target="_blank"
         rel="noopener noreferrer"
         style={{
@@ -240,11 +263,7 @@ export default function Home() {
         <img
           src="/images/callwhatsapp.gif"
           alt="WhatsApp"
-          style={{
-            width: "60px",
-            height: "60px",
-            cursor: "pointer",
-          }}
+          style={{ width: "60px", height: "60px", cursor: "pointer" }}
         />
       </a>
 
