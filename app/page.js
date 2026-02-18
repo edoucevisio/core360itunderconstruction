@@ -267,7 +267,7 @@ export default function Home() {
 
       {/* ================= FLOATING WHATSAPP ================= */}
       <a
-        href="https://wa.me/971501234567"
+        href="https://wa.me/23052519002"
         target="_blank"
         rel="noopener noreferrer"
         style={{
