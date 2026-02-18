@@ -177,7 +177,29 @@ export default function Home() {
         </section>
 
       </div>
-
+          {/* WHATSAPP FLOAT BUTTON */}
+          {/* ===================== */}
+          <a
+            href="https://wa.me/+23052519002"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              position: "fixed",
+              bottom: "20px",
+              right: "20px",
+              zIndex: 9999,
+            }}
+          >
+            <img
+              src="/images/callwhatsapp.gif"
+              alt="WhatsApp"
+              style={{
+                width: "60px",
+                height: "60px",
+                cursor: "pointer",
+              }}
+            />
+          </a>
       <Footer />
     </>
   );
