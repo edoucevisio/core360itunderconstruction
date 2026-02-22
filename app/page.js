@@ -1,9 +1,13 @@
 "use client";
-
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function Home() {
+
+  const [loading, setLoading] = useState(false);
+  const [toast, setToast] = useState(null);
+
   return (
     <>
       <Navbar />
@@ -251,30 +255,35 @@ export default function Home() {
         <form
           onSubmit={async (e) => {
             e.preventDefault();
+            setLoading(true);
 
             const formData = new FormData(e.target);
 
-            const res = await fetch("/api/contact", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                name: formData.get("name"),
-                email: formData.get("email"),
-                message: formData.get("message"),
-              }),
-            });
+            try {
+              const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  name: formData.get("name"),
+                  email: formData.get("email"),
+                  message: formData.get("message"),
+                }),
+              });
 
-            const data = await res.json();
-            console.log(data);
-
-            if (res.ok) {
-              alert("Message sent successfully!");
-              e.target.reset();
-            } else {
-              alert("Something went wrong.");
+              const data = await res.json();
+              
+              if (res.ok && data.success) {
+                setToast({ type: "success", message: "Message sent successfully!" });
+                e.target.reset();
+              } else {
+                setToast({ type: "error", message: "Something went wrong." });
+              }
+            } catch {
+              setToast({ type: "error", message: "Network error." });
             }
+
+            setLoading(false);
+            setTimeout(() => setToast(null), 3000);
           }}
         >
           <input
@@ -298,14 +307,35 @@ export default function Home() {
             required
           ></textarea>
 
-          <button type="submit" className="btn btn-primary w-100">
-            Send Message
+            <button
+              type="submit"
+              className="btn btn-primary w-100 d-flex justify-content-center align-items-center"
+              disabled={loading}
+              style={{ height: "48px" }}
+            >
+              {loading ? (
+                <>
+                  <span className="spinner-border spinner-border-sm me-2"></span>
+                  Sending...
+                </>
+              ) : (
+                "Send Message"
+              )}
           </button>
         </form>
             </div>
           </div>
         </div>
       </section>
+      
+          {toast && (
+            <div className={`custom-toast ${toast.type}`}>
+              <div className="toast-content">
+                <i className={`bi ${toast.type === "success" ? "bi-check-circle-fill" : "bi-x-circle-fill"}`}></i>
+                <span>{toast.message}</span>
+              </div>
+            </div>
+          )}
 
       {/* ================= WHATSAPP ================= */}
       <a
