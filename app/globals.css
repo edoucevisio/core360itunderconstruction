@@ -1,10 +1,186 @@
+/* ================= GLOBAL RESET ================= */
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  background-color: #f8f9fa;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: #1f2937;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ================= TYPOGRAPHY ================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+p {
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+}
+
+.btn-outline-primary {
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background: #2563eb;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ================= CARDS ================= */
+
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= SECTIONS ================= */
+
+section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* ================= FORMS ================= */
+
+.form-control {
+  border-radius: 10px;
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* ================= TOAST NOTIFICATIONS ================= */
+
+.custom-toast {
+  position: fixed;
+  top: 100px;
+  right: 30px;
+  padding: 16px 22px;
+  border-radius: 14px;
+  color: white;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.4s ease forwards;
+  z-index: 9999;
+}
+
+.custom-toast.success {
+  background: linear-gradient(135deg, #198754, #20c997);
+}
+
+.custom-toast.error {
+  background: linear-gradient(135deg, #dc3545, #ff4d6d);
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.toast-content i {
+  font-size: 18px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ================= WHATSAPP FLOAT BUTTON ================= */
+
+a[href*="wa.me"] div {
+  transition: all 0.3s ease;
+}
+
+a[href*="wa.me"]:hover div {
+  transform: scale(1.1);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* ================= HERO TEXT IMPROVEMENT ================= */
+
+.carousel-caption h1 {
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-caption p {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* ================= PREMIUM TESTIMONIAL CARDS ================= */
+
+section .p-5 {
+  transition: all 0.3s ease;
+}
+
+section .p-5:hover {
+  transform: translateY(-5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
 }
