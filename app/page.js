@@ -248,14 +248,60 @@ export default function Home() {
           </h2>
           <div className="row justify-content-center">
             <div className="col-md-6">
-              <form>
-                <input className="form-control mb-3" placeholder="Name" required />
-                <input type="email" className="form-control mb-3" placeholder="Email" required />
-                <textarea className="form-control mb-3" rows="4" placeholder="Message" required></textarea>
-                <button className="btn btn-primary w-100">
-                  Send Message
-                </button>
-              </form>
+        <form
+          onSubmit={async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(e.target);
+
+            const res = await fetch("/api/contact", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                name: formData.get("name"),
+                email: formData.get("email"),
+                message: formData.get("message"),
+              }),
+            });
+
+            const data = await res.json();
+            console.log(data);
+
+            if (res.ok) {
+              alert("Message sent successfully!");
+              e.target.reset();
+            } else {
+              alert("Something went wrong.");
+            }
+          }}
+        >
+          <input
+            name="name"
+            className="form-control mb-3"
+            placeholder="Name"
+            required
+          />
+          <input
+            name="email"
+            type="email"
+            className="form-control mb-3"
+            placeholder="Email"
+            required
+          />
+          <textarea
+            name="message"
+            className="form-control mb-3"
+            rows="4"
+            placeholder="Message"
+            required
+          ></textarea>
+
+          <button type="submit" className="btn btn-primary w-100">
+            Send Message
+          </button>
+        </form>
             </div>
           </div>
         </div>
